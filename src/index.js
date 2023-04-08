@@ -8,15 +8,11 @@ import { elements } from "chart.js";
 
 var json;
 
-var rr=true;
-
 async function codeforcesdata() {
     const id=prompt("user id ");
    
     const data=await fetch("https://codeforces.com/api/user.status?handle="+id);
-    if(data.status==="FAILED"){
-        rr=false;
-    }
+    
     json= await data.json();
     console.log(json);
     
@@ -133,6 +129,7 @@ codeforcesdata().then(()=>{
     const m2=new Map();
 
     const {status,result}=json;
+
     for (let index = 0; index < result.length; index++) {
         const tags=result[index].problem.tags;
         
