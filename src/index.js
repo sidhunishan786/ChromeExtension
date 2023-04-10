@@ -218,9 +218,12 @@ const Applayout=()=>{
         </div>
     );
 }
+const newele=document.createElement('div');
+newele.id='realdiv';
+document.getElementById('root').appendChild(newele);
 
-const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Applayout/>)
+const nnn=ReactDOM.createRoot(document.getElementById('realdiv'));
+nnn.render(<Applayout/>);
 
 }).catch(()=>{
     const Er=()=>{
