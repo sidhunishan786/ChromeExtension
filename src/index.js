@@ -9,9 +9,11 @@ import { elements } from "chart.js";
 var json;
 
 async function codeforcesdata() {
-    const id=prompt("user id ");
+    const id=window.location.href;
+    const a=id.split('/');
+
    
-    const data=await fetch("https://codeforces.com/api/user.status?handle="+id);
+    const data=await fetch("https://codeforces.com/api/user.status?handle="+a[a.length-1]);
     
     json= await data.json();
     console.log(json);
@@ -220,7 +222,7 @@ const Applayout=()=>{
 }
 const newele=document.createElement('div');
 newele.id='realdiv';
-document.getElementById('root').appendChild(newele);
+document.getElementById('pageContent').appendChild(newele);
 
 const nnn=ReactDOM.createRoot(document.getElementById('realdiv'));
 nnn.render(<Applayout/>);

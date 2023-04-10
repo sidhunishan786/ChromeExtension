@@ -5,20 +5,15 @@
   "name":"inject",
   "version":"1.0.0",
   "description":"-------",
-  "permissions":["tabs"],
+  
   "content_scripts":[
       {
           "matches":["https://codeforces.com/profile/*"],
-          "js":["content.js"]
+          "css":["/static/css/main.css"],
+          "js":["/static/js/main.js"]
        
       }
-  ],
-  "action": {
-    
-
-    "default_popup": "index.html"  
-
-  
-}
+  ]
+ 
 
 }
