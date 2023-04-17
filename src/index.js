@@ -148,23 +148,26 @@ codeforcesdata().then(()=>{
                 
             }
 
-          if(m.get(result[index].problem.rating)){
+          if(m.get(parseInt(result[index].problem.rating))){
  
-            m.set(result[index].problem.rating,m.get(result[index].problem.rating)+1);
+            m.set(parseInt(result[index].problem.rating),m.get(parseInt(result[index].problem.rating))+1);
         }
         else{
-            m.set(result[index].problem.rating,1);
+            m.set(parseInt(result[index].problem.rating),1);
         }
         problem_set.add(result[index].problem.name);
 
         }
         
     }
+    const sorted_map=[...m.entries()].sort((a,b) => a[0] - b[0]);
     
-    for(const [key,value] of m){
-        if(key===undefined){
+    for(const [key,value] of sorted_map){
+
+        if(key===undefined || key===NaN){
             continue;
         }
+       
         x.push(key);
         y.push(value);
        
