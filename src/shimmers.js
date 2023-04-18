@@ -2,8 +2,12 @@ import React from "react";
 
 const Shimmers=()=>{
     return (
-    <div id="shimmer">
-        we are loading your stats
+    <div >
+        <div id="shimmer">
+            <h1>we are loading your data......
+                <br></br>
+            please bear with us</h1>
+        </div>
     </div>
         );
 }

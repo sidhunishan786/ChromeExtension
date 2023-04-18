@@ -7,6 +7,16 @@ import PieChart from "./PieChart";
 import { elements } from "chart.js";
 import Shimmers from "./shimmers";
 
+
+const newele=document.createElement('div');
+newele.id='realdiv';
+document.getElementById('pageContent').appendChild(newele);
+
+const nnn=ReactDOM.createRoot(document.getElementById('realdiv'));
+
+nnn.render(<Shimmers/>);
+
+
 var json;
 
 async function codeforcesdata() {
@@ -214,11 +224,7 @@ const Applayout=()=>{
         </div>
     );
 }
-const newele=document.createElement('div');
-newele.id='realdiv';
-document.getElementById('pageContent').appendChild(newele);
 
-const nnn=ReactDOM.createRoot(document.getElementById('realdiv'));
 nnn.render(<Applayout/>);
 
 }).catch(()=>{
