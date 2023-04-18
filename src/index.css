@@ -6,7 +6,6 @@
   width: 870px;
   border-radius: 20px;
   
-  
 
 }
 #barchart{
@@ -16,15 +15,20 @@
   border-radius: 20px;
   
 }
+#shimmermain{
 
+  height: 500px;
+  width: 700px;
+
+}
 #shimmer{
+
   border: 1px solid black;
   height: 500px;
-  width: 870px;
+  width: 700px;
   border-radius: 20px;
   background-color: aquamarine;
   padding: 50px;
   
-
-
 }
+
