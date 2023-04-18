@@ -1,13 +1,18 @@
 
 #piechart{
-  border: 3px solid black;
+  margin-top: 20px;
+  border: 1px solid black;
   height: 500px;
-  width: 800px;
+  width: 870px;
+  border-radius: 20px;
+  
+  
 
 }
 #barchart{
-  border: 3px solid black;
+  border: 1px solid black;
   height: 500px;
-  width: 800px;
+  width: 870px;
+  border-radius: 20px;
   
 }

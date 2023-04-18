@@ -16,43 +16,38 @@ async function codeforcesdata() {
     const data=await fetch("https://codeforces.com/api/user.status?handle="+a[a.length-1]);
     
     json= await data.json();
-    console.log(json);
+ 
     
 }
 var x=[],y=[];
 var px=[],py=[];
 var piecolors=[
-    "Cornsilk",
+    "DarkMagenta",
+    "DarkKhaki",
+   
     "Crimson",
     "Cyan",
     "DarkBlue",
-    "DarkCyan",
-    "DarkGoldenRod",
-    "DarkGray",
-    "DarkGrey",
     "DarkGreen",
-    "DarkKhaki",
-    "DarkMagenta",
-    "DarkViolet",
+    "DarkGoldenRod",
     "DeepPink",
     "DeepSkyBlue",
-    "DimGray",
+    
     "DimGrey",
     "DodgerBlue",
     "FireBrick",
-    "FloralWhite",
+  
     "ForestGreen",
     "Fuchsia",
-    "Gainsboro",
-    "GhostWhite",
+    
     "Gold",
-    "AliceBlue",
-    "AntiqueWhite",
+   
+   
     "Aqua",
     "Aquamarine",
     "Azure",
-    "Beige",
-    "Bisque",
+   
+    
     "Black",
     "BlanchedAlmond",
     "Blue",
@@ -61,21 +56,7 @@ var piecolors=[
     "LavenderBlush",
     "LawnGreen",
     "LemonChiffon",
-    "LightBlue",
-    "LightCoral",
-    "LightCyan",
-    "LightGoldenRodYellow",
-    "LightGray",
-    "LightGrey",
-    "LightGreen",
-    "LightPink",
-    "LightSalmon",
-    "LightSeaGreen",
-    "LightSkyBlue",
-    "LightSlateGray",
-    "LightSlateGrey",
-    "LightSteelBlue",
-    "LightYellow",
+    
     "Lime",
     "LimeGreen",
     "Linen",
@@ -86,16 +67,12 @@ var piecolors=[
     "MediumOrchid",
     "NavajoWhite",
     "Navy",
-    "OldLace",
-    "Olive",
-    "OliveDrab",
-    "Orange",
+    
     "OrangeRed",
     "Orchid",
     "PaleGoldenRod",
     "PaleGreen",
-    "PaleTurquoise",
-    "PaleVioletRed",
+    
     "PapayaWhip",
     "PeachPuff",
     "Peru",
@@ -115,14 +92,17 @@ var piecolors=[
     "Teal",
     "Thistle",
     "Tomato",
-    "Turquoise",
-    "Violet",
-    "Wheat",
-    "White",
-    "WhiteSmoke",
-    "Yellow",
+   
     "YellowGreen",
+    "DarkGray",
+    "DarkGrey",
+    
+    
+    
+    "DarkViolet"
 ];
+
+
 
     
 codeforcesdata().then(()=>{
@@ -163,8 +143,9 @@ codeforcesdata().then(()=>{
     const sorted_map=[...m.entries()].sort((a,b) => a[0] - b[0]);
     
     for(const [key,value] of sorted_map){
-
-        if(key===undefined || key===NaN){
+       
+        if(key===undefined || isNaN(key)){
+            
             continue;
         }
        
@@ -172,6 +153,9 @@ codeforcesdata().then(()=>{
         y.push(value);
        
   }
+  //console.log(x);
+  
+  
   for (const [key,value] of m2){
     //console.log(key,value);
     if(key===undefined){
@@ -184,6 +168,8 @@ codeforcesdata().then(()=>{
 
   
 const Applayout=()=>{
+
+    
     
     const [userData,setUserData]=useState({
         labels: x,
@@ -207,6 +193,7 @@ const Applayout=()=>{
         }
         ]
     });
+    
 
     return (
         <div style={{width:'700px'}}>
@@ -234,10 +221,15 @@ nnn.render(<Applayout/>);
     const Er=()=>{
         return (
             <div>
-                please enter valid user id
+                there is some problem with API will be fixed soon!!!!!!!!!
             </div>
         )
     }
-    const root=ReactDOM.createRoot(document.getElementById('root'));
+    const temperrdiv=document.createElement('div');
+    temperrdiv.id='errormsg';
+    document.getElementById('pageContent').appendChild(temperrdiv);
+
+    const root=ReactDOM.createRoot(document.getElementById('errormsg'));
+
 root.render(<Er/>)
 })
