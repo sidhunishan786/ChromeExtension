@@ -1,3 +1,4 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useState } from "react";
@@ -5,6 +6,7 @@ import BarChart from "./BarChart";
 import "./index.css"
 import PieChart from "./PieChart";
 import { elements } from "chart.js";
+import Shimmers from "./shimmers";
 
 var json;
 
@@ -106,6 +108,7 @@ var piecolors=[
 
     
 codeforcesdata().then(()=>{
+
     const m=new Map();
     const problem_set=new Set();
     const m2=new Map();
@@ -193,9 +196,11 @@ const Applayout=()=>{
         }
         ]
     });
+
+    
     
 
-    return (
+    return  (
         <div style={{width:'700px'}}>
             <div id="barchart">
             <BarChart chartData={userData}></BarChart>
