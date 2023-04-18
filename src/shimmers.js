@@ -1,7 +1,8 @@
 import React from "react";
 
 const Shimmers=()=>{
-    return (<div id="shimmer">
+    return (
+    <div id="shimmer">
         we are loading your stats
     </div>
         );
