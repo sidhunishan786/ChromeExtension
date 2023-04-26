@@ -6,7 +6,7 @@
     "128": "icon128.png"
   },
   "action": {
-    "default_popup": "pop.html"
+    "default_popup": "/pop.html"
    
 },
   "manifest_version": 3,
